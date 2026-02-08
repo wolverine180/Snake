@@ -271,10 +271,17 @@ canvas.addEventListener("touchend", (e) => {
   }
 });
 // --- Sterowanie przyciskami (mobile / desktop) ---
-document.getElementById("up").addEventListener("click", () => setDirection("up"));
-document.getElementById("down").addEventListener("click", () => setDirection("down"));
-document.getElementById("left").addEventListener("click", () => setDirection("left"));
-document.getElementById("right").addEventListener("click", () => setDirection("right"));
+const upBtn = document.getElementById("up");
+const downBtn = document.getElementById("down");
+const leftBtn = document.getElementById("left");
+const rightBtn = document.getElementById("right");
+
+if (upBtn) upBtn.addEventListener("click", () => setDirection("up"));
+if (downBtn) downBtn.addEventListener("click", () => setDirection("down"));
+if (leftBtn) leftBtn.addEventListener("click", () => setDirection("left"));
+if (rightBtn) rightBtn.addEventListener("click", () => setDirection("right"));
+
+
 
 
 
