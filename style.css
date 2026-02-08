@@ -88,3 +88,32 @@ button:hover{ background: rgba(255,255,255,.1); }
 @media (max-width: 900px){
   .panel{ grid-template-columns: 1fr; }
 }
+.dpad{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dpad .middle{
+  display: flex;
+  gap: 8px;
+}
+
+.dpad button{
+  width: 64px;
+  height: 64px;
+  font-size: 26px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.dpad button:active{
+  transform: scale(0.95);
+  background: rgba(255,255,255,.15);
+}
+
