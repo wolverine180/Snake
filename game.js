@@ -247,3 +247,27 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./sw.js");
   });
 }
+// --- Sterowanie dotykiem (mobile) ---
+let touchStartX = 0;
+let touchStartY = 0;
+
+canvas.addEventListener("touchstart", (e) => {
+  const t = e.touches[0];
+  touchStartX = t.clientX;
+  touchStartY = t.clientY;
+}, { passive: true });
+
+canvas.addEventListener("touchend", (e) => {
+  const t = e.changedTouches[0];
+  const dx = t.clientX - touchStartX;
+  const dy = t.clientY - touchStartY;
+
+  if (Math.abs(dx) > Math.abs(dy)) {
+    if (dx > 30) setDirection("right");
+    else if (dx < -30) setDirection("left");
+  } else {
+    if (dy > 30) setDirection("down");
+    else if (dy < -30) setDirection("up");
+  }
+});
+
