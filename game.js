@@ -232,8 +232,8 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-btnPause.addEventListener("click", () => togglePause());
-btnRestart.addEventListener("click", () => {
+if (btnPause) btnPause.addEventListener("click", () => togglePause());
+if (btnRestart) btnRestart.addEventListener("click", () => {
   resetGame();
   restartLoop();
 });
@@ -280,6 +280,7 @@ if (upBtn) upBtn.addEventListener("click", () => setDirection("up"));
 if (downBtn) downBtn.addEventListener("click", () => setDirection("down"));
 if (leftBtn) leftBtn.addEventListener("click", () => setDirection("left"));
 if (rightBtn) rightBtn.addEventListener("click", () => setDirection("right"));
+
 
 
 
