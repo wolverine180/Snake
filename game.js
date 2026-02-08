@@ -285,3 +285,5 @@ if (rightBtn) rightBtn.addEventListener("click", () => setDirection("right"));
 
 
 
+
+
