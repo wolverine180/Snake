@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wąż (Snake) — klasyk</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#0b0d14" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>Wąż 🐍</h1>
+      <div class="stats">
+        <div>Punkty: <strong id="score">0</strong></div>
+        <div>Rekord: <strong id="best">0</strong></div>
+        <div>Prędkość: <strong id="speedLabel">1x</strong></div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <canvas id="game" width="480" height="480"></canvas>
+
+      <div class="help">
+        <div><strong>Sterowanie:</strong> strzałki / WASD</div>
+        <div><strong>Pauza:</strong> Spacja</div>
+        <div><strong>Restart:</strong> R</div>
+        <div class="hint">Tip: nie możesz zawrócić o 180° 😉</div>
+      </div>
+
+      <div class="buttons">
+        <button id="btnPause">Pauza / Wznów</button>
+        <button id="btnRestart">Restart</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
